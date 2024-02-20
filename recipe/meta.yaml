@@ -1,5 +1,5 @@
 {% set name = "pyflow" %}
-{% set version = "2.0.2" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/wonderworks-software/PyFlow/archive/{{ version }}.tar.gz
-  sha256: a7b692da37dab2988e1f03619be4876c0d91f47dde5a62d9de592da8d07538ec
+  sha256: 73fc2fc6d84377853a95502a45908065c7717111276bc63741f22906810fbb2f
 
 build:
   number: 0
