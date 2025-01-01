@@ -10,7 +10,7 @@ source:
   sha256: a7b692da37dab2988e1f03619be4876c0d91f47dde5a62d9de592da8d07538ec
 
 build:
-  number: 0
+  number: 1
   script: '{{ PYTHON }} -m pip install .  -vv '
   noarch: python
   entry_points:
@@ -19,9 +19,9 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
   run:
-    - python
+    - python >={{ python_min }}
     - pyrr
     - qt.py
     - blinker
@@ -30,6 +30,8 @@ requirements:
     - docutils
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - PyFlow
 
